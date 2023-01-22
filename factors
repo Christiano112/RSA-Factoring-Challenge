@@ -2,16 +2,16 @@
 """factorize a given set of numbers in a file to product of two small numbers"""
 from sys import argv
 
-def factorize(num_given):
+def factorize(n):
     """"find two small numbers that multiply to produce a given number"""
     i = 2
 
-    if num_given < 2:
+    if n < 2:
         return
 
-    while num_given % i:
+    while n % i:
         i += 1
-    print("{:.0f}={:.0f}*{:.0f}".format(num_given, num_given / i, i))
+    print("{:.0f}={:.0f}*{:.0f}".format(n, n / i, i))
 
 if len(argv) != 2:
     exit()
@@ -21,8 +21,8 @@ try:
         line = file.readline()
 
         while line != "":
-            num_given = int(line.split('\n')[0])
-            factorize(num_given)
+            n = int(line.split('\n')[0])
+            factorize(n)
             line = file.readline()
 except:
     pass
