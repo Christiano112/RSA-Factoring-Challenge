@@ -12,7 +12,7 @@ def factorize():
         file = sys.argv[1]
         with open(file) as f:
             for line_num in  f:
-                line_num = int(lin_num)
+                line_num = int(line_num)
                 if line_num % 2 == 0:
                         print("{}={}*{}".format(line_num, line_num // 2, 2))
                         continue
